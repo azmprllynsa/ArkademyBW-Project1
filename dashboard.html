@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+<div class="container-db">
+    <div class="db-header">
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleSidebar()">
+              &#9776
+            </div>
+            <div class="navbar-content">
+              <div class="dropdown-menu">
+                <div class="nav-dropdown">
+                  <button>All Categories &#9660;</button>
+                  <div class="dropdown-content">
+                    <a href="#">Romance</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Comedy</a>
+                    <a href="#">Other...</a>
+                  </div>
+                </div>
+                <div class="nav-dropdown">
+                  <button>All Times &#9660;</button>
+                  <div class="dropdown-content">
+                    <a href="#">Romance</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Comedy</a>
+                    <a href="#">Other...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-search">
+                <i class="fas fa-search"></i>
+                <input type="search" name="search" placeholder="search book">
+              </div>
+              <div class="nav-logo">
+                <img src="./assets/image/bookshelf.png" alt="">
+                <h3>Library</h3>
+              </div>
+            </div>
+        </div>
+          <aside class="sidebar">
+            <div id="sidebar">
+              <div class="hamburger-close" onclick="toggleSidebar()">
+                &#9776
+              </div>
+              <div class="img-sidebar">
+                <img src="./assets/image/45584233_524138308054985_5877540939093210292_n.png" alt="Niki Zefanya">
+                <h4>Niki Zefanya</h4>
+              </div>
+              <div class="sidebar-menu">
+                <a href="#">Explore</a>
+                <a href="#">History</a>
+                <a href="#" onclick="document.getElementById('modal-add').style.display='block'">Add Book*</a>
+              </div>
+            </div>
+          </aside>
+    </div>
+    <div class="main-content">
+        <section class="carousel">
+            <div class="carousel-btn">
+                <button class="prev-btn">&#60;</button>
+                <button class="next-btn">&#62;</button>
+            </div>
+            <div class="main-content">
+              <div class="carousel-group">
+                  <div class="carousel-slide">
+                      <div class="book-list book-list-1">
+                          <div class="overlay-slider">
+                              <h4>Dilan 1990</h4>
+                              <p>Pidi Baiq</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-slide slide-2">
+                      <div class="book-list book-list-2">
+                          <div class="overlay-slider">
+                              <h4>Ubur-Ubur Lembur</h4>
+                              <p>Raditya Dika</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-slide">
+                      <div class="book-list book-list-3">
+                          <div class="overlay-slider">
+                              <h4>Laskar Pelangi</h4>
+                              <p>Andrea Hirata</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            
+        </section>
+        <section class="cards">
+              <a href="./details.html">
+                  <div class="card-group">
+                      <div class="img-card">
+                          <img src="./assets/image/covernya (2).png" alt="">
+                      </div>
+                      <div class="title-card">
+                          <h1>Dilan 1990</h1>
+                      </div>
+                      <div class="desc-card">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet vehicula nisl consequat id.</p>
+                      </div>
+                  </div>
+              </a>
+              <div class="card-group">
+                  <div class="img-card">
+                      <img src="./assets/image/bodoamat.png" alt="">
+                  </div>
+                  <div class="title-card">
+                      <h1>Sebuah Seni Untuk ...</h1>
+                  </div>
+                  <div class="desc-card">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet vehicula nisl consequat id.</p>
+                  </div>
+              </div>
+              <div class="card-group">
+                  <div class="img-card">
+                      <img src="./assets/image/reacnative.png" alt="">
+                  </div>
+                  <div class="title-card">
+                      <h1>React Native</h1>
+                  </div>
+                  <div class="desc-card">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet vehicula nisl consequat id.</p>
+                  </div>
+              </div>
+        </section>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal-add" class="modal">
+    <form class="modal-content" action=" ">
+        <div class="modal-header">
+            <span onclick="document.getElementById('modal-add').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2>ADD DATA</h2>
+        </div>
+        <div class="edit-container">
+            <div class="modal-body">
+                <label>Url Image</label>
+                <input type="text"  name="url-img">      
+            </div>
+            <div class="modal-body">
+                <label>Title</label>
+                <input type="text" name="title">
+            </div>
+            <div class="modal-body">
+                <label>Description</label>
+                <textarea name="description" rows="5" ></textarea>        
+            </div>
+            <a href="" class="button edit-btn">Save</a>
+            </div>
+    </form>
+</div>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

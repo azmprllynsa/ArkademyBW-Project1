@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="container-details">
+    <header class="cover-img">
+        <header class="navigation">
+            <div class="back">
+                <a href="./dashboard.html">
+                    <img src="./assets/image/back.jpg" alt="Back">
+                </a>
+            </div>
+            <div class="control">
+                <a href="#" onclick="document.getElementById('modal-edit').style.display='block'">Edit</a>
+                <a href="#" onclick="successInfo()">Delete</a>
+            </div>
+        </header>
+    </header>
+    <div class="rectangle">
+    </div>
+    <section class="detailbook">
+        <a href="#">Novel</a>
+        <div class="detailhead">
+            <div class="title-book">
+                <h1>DILAN 1990</h1>
+                <h5>30 Juni 2019</h5>
+            </div>        
+            <h3>Available</h3>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin ac diam eget est rutrum ultrices. Donec laoreet enim a massa dapibus,
+            cursus egestas dui pulvinar. Proin sit amet accumsan lectus.
+            Nullam auctor auctor consequat. Donec semper magna erat, sed fringilla lacus pretium eget.
+            Cras porttitor, nibh sit amet interdum bibendum, nibh velit accumsan tellus,
+            vel vehicula tellus leo vitae ipsum. Praesent sit amet libero sed orci ullamcorper efficitur.
+            Pellentesque in euismod purus, sit amet ultrices tortor. Vestibulum ante dui,
+            tempor at dui id, tincidunt euismod diam. Integer pellentesque massa nibh,
+            ac eleifend odio malesuada sed. Phasellus orci sem, cursus nec orci ut,
+            accumsan facilisis lacus. Nullam at elementum nibh, ac gravida felis.
+            In sagittis rhoncus nisi tempus dignissim. Sed fringilla consequat ante vitae lobortis.
+            Cras posuere ligula vel enim suscipit malesuada. Vivamus non nulla ut ante imperdiet
+            euismod quis nec massa.
+        </p>
+        <button type="submit" class="btn-borrow" >Borrow</button>
+    </section>
+    
+    <!-- Modal Edit -->
+    
+    <div id="modal-edit" class="modal">
+        <form class="modal-content" action=" ">
+            <div class="modal-header">
+                <span onclick="document.getElementById('modal-edit').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h2>EDIT DATA</h2>
+            </div>
+            <div class="edit-container">
+                <div class="modal-body">
+                    <label>Url Image</label>
+                    <input type="text" placeholder="http://gambar.com/dilan.jpg" name="url-img">      
+                </div>
+                <div class="modal-body">
+                    <label>Title</label>
+                    <input type="text" placeholder="Dilan 1990" name="title">
+                </div>
+                <div class="modal-body">
+                    <label>Description</label>
+                    <textarea name="description" rows="5" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac diam eget est rutrum ultrices. Donec laoreet enim a massa dapibus, cursus egestas dui pulvinar."></textarea>        
+                </div>
+                <a href=" " class="button edit-btn">Save</a>
+                </div>
+        </form>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>
+
